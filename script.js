@@ -11,18 +11,18 @@
 // Hint: keeping track of the size in percentage might be easier.
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
-let p = document.getElementById("balloon");
+let balloon = document.getElementById("balloon");
 let size;
 function setSize(newSize) {
     size = newSize;
-    p.style.fontSize = size + "px";
+    balloon.style.fontSize = size + "px";
 }
 setSize(10);
 
 function handleArrow(Event) {
     if (Event.key == "ArrowUp") {
         if (size > 80) {
-            p.textContent = "💥";
+            balloon.textContent = "💥";
             document.body.removeEventListener("keydown", handleArrow);
         } else {
             setSize(size * 1.1);
@@ -44,3 +44,5 @@ document.body.addEventListener("keydown" , handleArrow)
 // function as expected. There are many ways to accomplish this task, but you will need
 // to at minimum add listeners to each link and toggle the display of the tab contents.
 // Hint: display: none; hides an element, and display: block; will bring it
+
+
