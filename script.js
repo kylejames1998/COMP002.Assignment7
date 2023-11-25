@@ -13,21 +13,27 @@
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
 let balloon = document.getElementById("balloon");
 let size;
+// Function that sets the size of the balloon at first
 function setSize(newSize) {
     size = newSize;
+    // sets the font size to "" px so that the size can actually be increased or decreased (without this the size cannot be changed)
     balloon.style.fontSize = size + "px";
 }
+// sets the size of the balloon to 10px at start
 setSize(10);
-
+// function that handles the arrowUp and arrowDown events
 function handleArrow(Event) {
+    // checks if the balloon is bigger than 80px, if it is, the balloon is changed to the 💥 emoji.
     if (Event.key == "ArrowUp") {
         if (size > 80) {
             balloon.textContent = "💥";
             document.body.removeEventListener("keydown", handleArrow);
+            // if the balloon is smaller than 80px, an arrowUp event will increase the size by 10% and the page scrolling will be prevented (arrow keys scroll the page)
         } else {
             setSize(size * 1.1);
             Event.preventDefault();
         }
+        // if the arrow down key is pressed, the size of the balloon will be decreased by 10%
     } else if (Event.key == "ArrowDown") {
         setSize(size * 0.9);
         Event.preventDefault();
@@ -46,3 +52,4 @@ document.body.addEventListener("keydown" , handleArrow)
 // Hint: display: none; hides an element, and display: block; will bring it
 
 
+// Need to hide
