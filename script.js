@@ -20,7 +20,7 @@ function setSize(newSize) {
     balloon.style.fontSize = size + "px";
 }
 // sets the size of the balloon to 10px at start
-setSize(10);
+setSize(15);
 // function that handles the arrowUp and arrowDown events
 function handleArrow(Event) {
     // checks if the balloon is bigger than 80px, if it is, the balloon is changed to the 💥 emoji.
