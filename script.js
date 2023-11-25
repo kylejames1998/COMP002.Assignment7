@@ -33,7 +33,7 @@ function handleArrow(Event) {
             setSize(size * 1.1);
             Event.preventDefault();
         }
-        // if the arrow down key is pressed, the size of the balloon will be decreased by 10%
+        // if the arrow down key is pressed, the size of the balloon will be decreased by 10% (and page scroll will be prevented)
     } else if (Event.key == "ArrowDown") {
         setSize(size * 0.9);
         Event.preventDefault();
