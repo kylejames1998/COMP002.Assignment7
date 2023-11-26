@@ -11,6 +11,7 @@
 // Hint: keeping track of the size in percentage might be easier.
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
+// setting the variable balloon to the element with an ID of "balloon"
 let balloon = document.getElementById("balloon");
 let size;
 // Function that sets the size of the balloon at first
@@ -19,7 +20,7 @@ function setSize(newSize) {
     // sets the font size to "" px so that the size can actually be increased or decreased (without this the size cannot be changed)
     balloon.style.fontSize = size + "px";
 }
-// sets the size of the balloon to 10px at start
+// sets the size of the balloon to 15px at start
 setSize(15);
 // function that handles the arrowUp and arrowDown events
 function handleArrow(Event) {
@@ -52,4 +53,7 @@ document.body.addEventListener("keydown" , handleArrow)
 // Hint: display: none; hides an element, and display: block; will bring it
 
 
-// Need to hide
+// Possibly use an if statement to hide the tabs that you dont want to see
+// use event.Prevent.default to prevent default events
+
+const Links = document.querySelectorAll
