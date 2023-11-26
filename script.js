@@ -28,6 +28,7 @@ function handleArrow(Event) {
     if (Event.key == "ArrowUp") {
         if (size > 80) {
             balloon.textContent = "💥";
+            // event listener is removed so that the 💥 emoji's size cannot be affected by an arrowup or down event
             document.body.removeEventListener("keydown", handleArrow);
             // if the balloon is smaller than 80px, an arrowUp event will increase the size by 10% and the page scrolling will be prevented (arrow keys scroll the page)
         } else {
@@ -54,6 +55,4 @@ document.body.addEventListener("keydown" , handleArrow)
 
 
 // Possibly use an if statement to hide the tabs that you dont want to see
-// use event.Prevent.default to prevent default events
-
-const Links = document.querySelectorAll("li");
+// use event.Prevent.default to prevent default events (need to prevent the default actions of links)
