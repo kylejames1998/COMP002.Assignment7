@@ -62,5 +62,16 @@ let tab2 = document.getElementById("tab2");
 let tab3 = document.getElementById("tab3");
 
 document.getElementById("tab1Link").addEventListener("click");
+preventDefault();
 document.getElementById("tab2Link").addEventListener("click");
+preventDefault();
 document.getElementById("tab3Link").addEventListener("click");
+preventDefault();
+
+
+let tab12 = document.getElementById("tab1");
+tab12.addEventListener("click", () => {
+    preventDefault();
+    tab12.style.display = "block";
+    tab2.style.display = "none";
+})
