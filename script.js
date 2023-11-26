@@ -56,3 +56,11 @@ document.body.addEventListener("keydown" , handleArrow)
 
 // Possibly use an if statement to hide the tabs that you dont want to see
 // use event.Prevent.default to prevent default events (need to prevent the default actions of links)
+
+let tab1 = document.getElementById("tab1");
+let tab2 = document.getElementById("tab2");
+let tab3 = document.getElementById("tab3");
+
+document.getElementById("tab1Link").addEventListener("click");
+document.getElementById("tab2Link").addEventListener("click");
+document.getElementById("tab3Link").addEventListener("click");
