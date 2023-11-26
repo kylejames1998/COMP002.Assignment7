@@ -56,4 +56,4 @@ document.body.addEventListener("keydown" , handleArrow)
 // Possibly use an if statement to hide the tabs that you dont want to see
 // use event.Prevent.default to prevent default events
 
-const Links = document.querySelectorAll
+const Links = document.querySelectorAll("li");
