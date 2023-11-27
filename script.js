@@ -54,25 +54,53 @@ document.body.addEventListener("keydown" , handleArrow)
 // Hint: display: none; hides an element, and display: block; will bring it
 
 
-// Possibly use an if statement to hide the tabs that you dont want to see
-// use event.Prevent.default to prevent default events (need to prevent the default actions of links)
+// Variables for tabLinks (links)
+let tab1Link = document.getElementById("tab1Link");
+let tab2Link = document.getElementById("tab2Link");
+let tab3Link = document.getElementById("tab3Link");
 
+// Variables for tabs (divs with content)
+let tab1 = document.getElementById("tab1");
+let tab2 = document.getElementById("tab2");
+let tab3 = document.getElementById("tab3");
 
+// Function that initially hides all and then sets the clicked tab to be shown
+function showTab(tabToShow) {
+    // Hides all tabs initially
+    tab1.style.display = "none";
+    tab2.style.display = "none";
+    tab3.style.display = "none";
+    // shows "clicked tab" after all are set to none
+    tabToShow.style.display = "block";
+}
 
-let tab12 = document.getElementById("tab1");
-tab12.addEventListener("click", () => {
-    preventDefault();
-    tab12.style.display = "block";
+// Event listeners for the links
+// Link 1 EL
+tab1Link.addEventListener("click", function(event) {
+    // Prevents navigating to link's href
+    event.preventDefault();
+    // sets tab1 to show when the tab1 link is clicked
+    showTab(tab1);
 });
 
-let tab13 = document.getElementById("tab2");
-tab13.addEventListener("click", () => {
-    preventDefault();
-    tab13.style.display = "block";
+// Link 2 EL
+tab2Link.addEventListener("click", function(event) {
+    // Prevents navigating to link's href
+    event.preventDefault();
+    // sets tab2 to show when the tab2 link is clicked
+    showTab(tab2);
 });
 
-let tab14 = document.getElementById("tab3");
-tab14.addEventListener("click", () => {
-    preventDefault();
-    tab13.style.display = "block";
+// Link 3 EL
+tab3Link.addEventListener("click", function(event) {
+    // Prevents navigating to link's href
+    event.preventDefault();
+    // sets tab3 to show when the tab3 link is clicked
+    showTab(tab3);
 });
+
+// Function that shows tab1 on page load
+window.onload = function() {
+    // calls showTab function with tab1 as the parameter so that tab1 will be shown on page load (all are set to none in the above function)
+    showTab(tab1); 
+};
